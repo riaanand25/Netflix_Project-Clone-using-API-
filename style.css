@@ -81,6 +81,20 @@ h2{
    overflow-x: scroll;
    overflow-y: hidden;
     }
+
+
+div#NetflixContainer::-webkit-scrollbar,
+div#trendingContainer::-webkit-scrollbar,
+div#topRatedContainer::-webkit-scrollbar,
+div#ActionMoviesContainer::-webkit-scrollbar,
+div#ComedyMoviesContainer::-webkit-scrollbar,
+div#romanticMoviesContainer::-webkit-scrollbar,
+div#HorrorMoviesContainer::-webkit-scrollbar,
+div#documentariesMoviesContainer::-webkit-scrollbar
+{
+    display: none;
+}
+
 .Poster{
     width: 150px;
     height: 200px;
