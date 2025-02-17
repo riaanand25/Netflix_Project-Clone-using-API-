@@ -67,22 +67,25 @@ button:hover {
 }
 
 h2{
-    padding: 1rem 2rem;  
+    padding: 1rem;  
 }
 #NetflixContainer,
 #trendingContainer,
 #topRatedContainer,
-#ActionMoviesContainer {
+#ActionMoviesContainer,
+#ComedyMoviesContainer,
+#HorrorMoviesContainer,
+#romanticMoviesContainer,
+#documentariesMoviesContainer{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+   overflow-x: scroll;
+   overflow-y: hidden;
     }
 .Poster{
     width: 150px;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
+    padding: 10px;
 }
 .Poster img{
     width: 100%;

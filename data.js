@@ -8,4 +8,8 @@ export const requests = {
     topRated: `/movie/top_rated?language=en-US&page=1&api_key=${API_KEY}`,
     actionMovies: `/discover/movie?include_adult=false&include_video=false&
     language=en-US&page=1&sort_by=popularity.desc&api_key=${API_KEY}`,
+    comedyMovies :`/discover/movie?api_key=${API_KEY}&with_genres=35`,
+    horrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
+    romanticMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
+    documentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`
 };

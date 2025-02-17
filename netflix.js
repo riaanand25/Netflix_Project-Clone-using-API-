@@ -4,8 +4,14 @@ const originalsDiv = document.querySelector("#NetflixContainer");
 const trendingDiv = document.querySelector("#trendingContainer");
 const topRatedDiv = document.querySelector("#topRatedContainer");
 const actionMoviesDiv = document.querySelector("#ActionMoviesContainer");
+const comedyMoviesDiv = document.querySelector("#ComedyMoviesContainer");
+const horrorMoviesDiv = document.querySelector("#HorrorMoviesContainer");
+const romanticMoviesDiv = document.querySelector("#romanticMoviesContainer");
+const documentariesMoviesDiv = document.querySelector("#documentariesMoviesContainer");
+
+
 const navbar = document.querySelector(".navbar");
-const content = document.querySelector(".content")
+const content = document.querySelector(".content");
 
 const data = [];
 
@@ -35,12 +41,18 @@ displayMovies(data[0], originalsDiv);
 displayMovies(data[1], trendingDiv);
 displayMovies(data[2], topRatedDiv);
 displayMovies(data[3], actionMoviesDiv);
-
+displayMovies(data[4], comedyMoviesDiv);
+displayMovies(data[5], horrorMoviesDiv);
+displayMovies(data[6], romanticMoviesDiv);
+displayMovies(data[7], documentariesMoviesDiv);
 
 function getRandomImage() {
+        
         const randomIndex = Math.floor(Math.random() * data[0].length);
         const randomMovie = data[0][randomIndex];
         console.log(randomMovie);
+
+        
 
         const Name = document.createElement("h1");
         Name.textContent = randomMovie.name;
