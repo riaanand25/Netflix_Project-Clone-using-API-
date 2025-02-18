@@ -12,7 +12,6 @@ const documentariesMoviesDiv = document.querySelector("#documentariesMoviesConta
 
 const navbar = document.querySelector(".navbar");
 const content = document.querySelector(".content");
-
 const data = [];
 
 async function fetchDataFromURL(value) {
@@ -25,7 +24,7 @@ async function fetchDataFromURL(value) {
 for (const key in requests) {
     data.push(await fetchDataFromURL(requests[key]));
 }
-console.log(data);
+// console.log(data);
 getRandomImage()
 
 function displayMovies(movieArray, container) {
@@ -46,19 +45,23 @@ displayMovies(data[5], horrorMoviesDiv);
 displayMovies(data[6], romanticMoviesDiv);
 displayMovies(data[7], documentariesMoviesDiv);
 
-function getRandomImage() {
-        
+function getRandomImage(){
         const randomIndex = Math.floor(Math.random() * data[0].length);
         const randomMovie = data[0][randomIndex];
         console.log(randomMovie);
-
-        
 
         const Name = document.createElement("h1");
         Name.textContent = randomMovie.name;
 
         const overview = document.createElement("p")
         overview.textContent = randomMovie.overview;
+
+        const words = randomMovie.overview.split(' ');
+        if (words.length>15) {
+            overview.innerHTML = words.slice(0,15).join(" ") + "...";
+        } else {
+            overview.innerHTML = randomMovie.overview;
+        }
 
         navbar.style.backgroundImage = `url(${IMAGE_URL + randomMovie.poster_path})`;
         navbar.style.backgroundSize = "cover";
