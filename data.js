@@ -13,3 +13,5 @@ export const requests = {
     romanticMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
     documentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`
 };
+
+
